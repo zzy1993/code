@@ -17,8 +17,8 @@ int main(int argc, char **argv){
         exit(num);
     }
     else {
-        int status = 0;
+        int status;
         wait(&status);
-        printf("Child exited with status: %d", status);
+        printf("Child exited with status: %d", WEXITSTATUS(status));
     }
 }
